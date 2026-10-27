@@ -1,0 +1,111 @@
+/* ListMeal.css */
+
+/* Global container */
+.list-meal-container {
+  max-width: 1300px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #f5f7fa;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  font-family: 'Poppins', sans-serif;
+  margin-top: 1px;
+}
+
+/* Heading */
+.list-meal-container h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+/* Table Styles */
+.list-meal-container table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.list-meal-container th,
+.list-meal-container td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.list-meal-container th {
+  background-color: #470366;
+  color: #fff;
+  font-weight: 600;
+}
+
+.list-meal-container tr:hover {
+  background-color: #f1f9ff;
+}
+
+/* Action Buttons */
+.list-meal-container button {
+  padding: 6px 10px;
+  margin: 2px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.list-meal-container button:hover {
+  transform: translateY(-2px);
+}
+
+.list-meal-container button:first-child {
+  background: #ff9800;
+  color: #fff;
+}
+
+.list-meal-container button:first-child:hover {
+  background: #fb8c00;
+}
+
+.list-meal-container button:last-child {
+  background: #f44336;
+  color: #fff;
+}
+
+.list-meal-container button:last-child:hover {
+  background: #e53935;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  .list-meal-container table,
+  .list-meal-container thead,
+  .list-meal-container tbody,
+  .list-meal-container th,
+  .list-meal-container td,
+  .list-meal-container tr {
+    display: block;
+  }
+  .list-meal-container tr {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  .list-meal-container td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+  .list-meal-container td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    width: 45%;
+    text-align: left;
+    font-weight: 600;
+  }
+}

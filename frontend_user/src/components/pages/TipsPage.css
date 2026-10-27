@@ -1,0 +1,66 @@
+/* Container for the page */
+.tips-container {
+  padding: 40px;
+  background: linear-gradient(to right, #79b6fc, #96e6d9);
+  min-height: 100%;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Page Heading */
+.tips-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px #ffffffaa;
+  text-align: center;
+}
+
+/* Grid layout for tips */
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Each tip card */
+.tip-card {
+  background: #ffffffdd;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+/* Hover effect */
+.tip-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* Tip icon */
+.tip-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+/* Tip title */
+.tip-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #27ae60;
+  margin-bottom: 10px;
+}
+
+/* Tip description */
+.tip-description {
+  font-size: 1rem;
+  color: #34495e;
+  line-height: 1.5;
+}

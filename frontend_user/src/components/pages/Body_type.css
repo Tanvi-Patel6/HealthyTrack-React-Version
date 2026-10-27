@@ -1,0 +1,76 @@
+body {
+  background: #f5f7fa;
+  font-family: 'Poppins', sans-serif;
+}
+
+.bt-card {
+  background:rgb(61, 140, 132);
+  padding: 55px;
+  max-width: 600px;
+  margin: 60px auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.566);
+}
+
+.bt-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: black;
+}
+
+
+
+
+ input{
+  flex: 1;
+  padding: 12px 14px;
+  margin: 2.5px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+select {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+  width: 100%;
+}
+
+ input:focus,
+ select:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 10px rgba(108,99,255,0.2);
+}
+
+.input1{
+  width: 100%;
+}
+
+.bt-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #052e2a, #08989f);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bt-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(143, 240, 212, 0.3);
+}
+
+.bt-actions {
+  margin-top: 10px;
+}

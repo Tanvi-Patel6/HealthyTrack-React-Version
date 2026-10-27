@@ -1,0 +1,122 @@
+.admin-sidebar {
+  width: 240px;
+  background-color: #111827;
+  color: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: width 0.3s;
+  /* Add these */
+  position: fixed;  /* Fix sidebar */
+  top: 0;
+  left: 0;
+  height: 100vh;    /* Full height */
+  overflow: hidden; /* Prevent sidebar scrolling */
+  z-index: 1000;    /* Stay above content */
+}
+
+.admin-sidebar.collapsed {
+  width: 70px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.sidebar-header h2 {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.collapse-btn {
+  background: none;
+  border: none;
+  color: #f3f4f6;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.collapse-btn:hover {
+  transform: rotate(90deg);
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 15px;
+}
+
+.sidebar-menu li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #d1d5db;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.sidebar-menu li a .icon {
+  font-size: 18px;
+  margin-right: 15px;
+}
+
+.sidebar-menu li a:hover {
+  background-color: #374151;
+  color: #ffffff;
+}
+
+.sidebar-menu li a.active {
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.admin-sidebar.collapsed .sidebar-menu li a .text {
+  display: none;
+}
+
+.admin-sidebar.collapsed .sidebar-header h2 {
+  display: none;
+}
+
+.admin-sidebar.collapsed .collapse-btn {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+.sidebar-logout {
+  margin-top: auto; /* Push to bottom */
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+  color: #d1d5db;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.sidebar-logout:hover {
+  background-color: #374151;
+  color: white;
+}
+
+.sidebar-logout .icon {
+  font-size: 18px;
+  margin-right: 15px;
+}
+
+
+.header-icon {
+  font-size: 28px;
+  color: #ff6b6b;
+}

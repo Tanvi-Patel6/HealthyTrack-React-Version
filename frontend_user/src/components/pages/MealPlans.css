@@ -1,0 +1,150 @@
+/* Background setup */
+.meal-page {
+  min-height: calc(100vh - 100px);
+  padding: 40px;
+  background: linear-gradient(135deg, #d4fc79, #96e6a1);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header section */
+.meal-header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.meal-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.meal-header span {
+  color: #0b5615;
+}
+
+.meal-header p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Filter bar */
+.filter-container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.filter-container select,
+.filter-container button {
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.filter-container select {
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.filter-container button {
+  background-color: #3fa34d;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.filter-container button:hover {
+  background-color: #2f7d38;
+}
+
+/* Grid layout */
+.meals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Meal cards */
+.meal-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meal-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Meal info */
+.meal-info h3 {
+  font-size: 1.4rem;
+  color: #222;
+}
+
+.meal-day {
+  color: #666;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+/* Nutrients grid */
+.nutrient-grid {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.nutrient {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(63, 163, 77, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #222;
+  transition: 0.2s ease;
+}
+
+.nutrient:hover {
+  background-color: rgba(63, 163, 77, 0.2);
+}
+
+/* Loading & No Data */
+.loading,
+.no-meals {
+  margin-top: 40px;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Glow effect */
+.card-glow {
+  position: absolute;
+  bottom: -40%;
+  right: -40%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(63, 163, 77, 0.3), transparent);
+  border-radius: 50%;
+  z-index: 0;
+}

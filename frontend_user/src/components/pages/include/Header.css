@@ -1,0 +1,92 @@
+.header {
+  width: 100%;
+ background: #caf0f8;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(15px);
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Row 1 */
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.navbar-top .brand {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #03045e;
+}
+
+.navbar-top .user {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+/* Row 2 */
+.navbar-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.header-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.header-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+  font-weight: 500;
+  transition: 0.3s;
+  position: relative;
+}
+
+.header-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #03045e;
+  transition: width 0.3s;
+}
+
+.header-links a:hover::after {
+  width: 100%;
+}
+
+.header-links a:hover {
+  color: #03045e;
+}
+
+/* Logout button */
+.logout .button{
+  background: #0077b6;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.logout .button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(50, 180, 255, 0.653);
+}

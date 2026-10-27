@@ -1,0 +1,122 @@
+/* AssignMeal.css */
+
+/* Global container */
+.assign-meal-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Headings */
+.assign-meal-container h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* Meal Form */
+.meal-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.meal-form select,
+.meal-form input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.meal-form select:focus,
+.meal-form input:focus {
+  outline: none;
+  border-color: #1844d6;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+/* Buttons */
+.meal-form button {
+  grid-column: 1 / -1;
+  padding: 12px;
+  background: #1844d6;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.meal-form button:hover {
+  background: #1844d6;
+  transform: translateY(-2px);
+}
+
+/* Table Styles */
+.assign-meal-container table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.assign-meal-container th,
+.assign-meal-container td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.assign-meal-container th {
+  background-color: #187ec7;
+  color: white;
+  font-weight: 600;
+}
+
+.assign-meal-container tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  .meal-form {
+    grid-template-columns: 1fr;
+  }
+  .assign-meal-container table,
+  .assign-meal-container thead,
+  .assign-meal-container tbody,
+  .assign-meal-container th,
+  .assign-meal-container td,
+  .assign-meal-container tr {
+    display: block;
+  }
+  .assign-meal-container tr {
+    margin-bottom: 15px;
+  }
+  .assign-meal-container td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+  .assign-meal-container td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    width: 45%;
+    text-align: left;
+    font-weight: 600;
+  }
+}

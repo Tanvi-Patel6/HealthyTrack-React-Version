@@ -1,0 +1,123 @@
+* how to do?
+
+
+~ backend 
+
+step 1: setup node.js backend
+
+- first you need to make folder backend
+- after that install dependencies :
+   in backend folder write command  
+        npm init -y
+        npm install express mongoose cors dotenv bcrypt jsonwebtoken
+- after that create .env file 
+    in that 
+        PORT=5000
+        DATABASE=mongodb://127.0.0.1:27017/healthytrack (here write your db name)
+        TOKEN_SECRET=your_secret_key  
+- after that create server.js file in backend folder
+
+
+step 2: create mongoose model ( this will create collection in mongodb automatically)
+
+- in backend folder make another folder named models
+- in models/ male file with .js extention
+
+step 3: create API Routes
+
+- male folder routes in backend 
+- in that make file userRoutes.js or any file that is required for routes
+
+
+step 4: create controller
+
+- now create folder name controller 
+- in that create file with .js 
+
+step 5: auth.js
+
+- create folder in backend middleware for checking the varification
+- in that make file name auth.js 
+
+- after all this done on terminal run this command
+        - cd backend
+        - node server.js
+    - it will create new database automatically & create collection that we give name in file models/userModels(any file).js.
+
+
+
+
+* what is the meaning of models,routes,controller.middleware?
+
+- model :
+    Defines how the data looks and how it’s stored in the database.
+    Think of it like a blueprint for your MongoDB collection.
+    Collection name will be users.
+    Each document will follow this structure.
+
+- controller :
+    Contains functions that do the real work (business logic).
+    Controllers use the model to talk to MongoDB.
+
+- routes :
+    Connects URLs (API endpoints) to controller functions.
+    /register → send request to userCtrl.registerUser
+    /login → send request to userCtrl.loginUser
+
+- server :
+    Ties everything together.
+
+
+- data flow :
+    React (frontend form) 
+    ↓ POST request
+    Express Route (userRoutes.js)
+        ↓ calls
+    Controller (userCtrl.js)
+        ↓ uses
+    Model (User.js → MongoDB collection "users")
+        ↓ save data
+    MongoDB (HealthyTrack database)
+        ↓
+    Response → Controller → Route → Back to React
+
+- Summary
+
+    Model → database structure
+
+    Controller → logic (register, login, verify)
+
+    Routes → API endpoints
+
+    Server.js → glue for everything
+
+    Data flow → React → Route → Controller → Model → MongoDB → back to React
+
+
+
+~ frontend
+
+- first we will create 2 folder 
+- in terminal in healthytrack/   give command
+    - npx create-react-app frontend_user ( it will create folder frontend_user & also install react)
+    - npx create-react-app frontend_admin ( it will create folder frontend_admin & also install react)
+    - in both folder run this command (npm install axios react-router-dom)
+    - run this command also for navigate between pages (npm install react-router-dom)
+
+
+
+* frontend_user :
+
+- in src/ make folder name component in that make login / register and pages folder in that different pages will be there 
+
+- for navigation :
+        in app.js we need to route all the pages.
+
+- from register to going in login we need to user useNavigate hook.
+
+- Like php when we include header and footer in all the pages using include , in react to do that follow the following step.
+
+    1. first make header.js & footer.js file.
+    2. create layout.js file , and in that import header & footer file.
+    3. after creating file simply  import layout file in app.js.
+    4. after that in app.js file in route section, which file you want that has header & footer write this in route tag.(<Route path="/body_type" element={<Layout><Body_type /></Layout>} />)  add layout tag in element attribut.

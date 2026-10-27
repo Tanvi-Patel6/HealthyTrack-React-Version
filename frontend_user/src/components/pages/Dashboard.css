@@ -1,0 +1,121 @@
+.dashboard-full {
+  padding: 30px;
+  background: #f4f7f8;
+  min-height: 100vh;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+/* Meal, Activity, Quick Actions, Notifications */
+.meal-section, .activity-section, .quick-actions, .notifications {
+  margin-bottom: 30px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.meal-section h2, .activity-section h2, .quick-actions h2, .notifications h2 {
+  margin-bottom: 15px;
+  color: #2E7D32;
+}
+
+.meal-section ul, .activity-section ul, .notifications ul {
+  list-style: none;
+}
+
+.meal-section li, .activity-section li, .notifications li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Quick Actions Buttons */
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.action-buttons button {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.action-buttons button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Chart Placeholder */
+.chart-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #aaa;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+
+.recipe-section {
+  margin: 40px 0;
+  background-color: #f7f9fc;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.recipe-card {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.recipe-image {
+  width: 450px;
+  height: 430px;
+  margin-top: 20px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.recipe-content {
+  flex: 1;
+  min-width: 250px;
+}
+
+.recipe-content h2 {
+  margin-top: 0;
+  color: #125815;
+}
+
+.recipe-description {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.recipe-content h4 {
+  margin: 15px 0 5px;
+  color: #333;
+}
+
+.recipe-content ul, .recipe-content ol {
+  margin-left: 20px;
+}
+

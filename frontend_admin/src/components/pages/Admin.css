@@ -1,0 +1,118 @@
+/* Page Container */
+.admin-management-container {
+  max-width: 1000px;
+  margin: 50px auto 100px auto; /* bottom spacing for footer */
+  padding: 30px;
+  background: linear-gradient(135deg, #f7f8fc, #e2e8f0);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Page Title */
+.admin-management-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* Table Styling */
+.admin-management-container table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  font-size: 1rem;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+/* Table Header */
+.admin-management-container th {
+  background-color: #3b82f6;
+  color: white;
+  padding: 15px 20px;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Table Body */
+.admin-management-container td {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Row hover effect */
+.admin-management-container tbody tr:hover td {
+  transform: scale(1.02);
+  box-shadow: 0 5px 20px rgba(59, 130, 246, 0.2);
+  cursor: pointer;
+}
+
+/* Delete Button */
+.btn-delete {
+  background-color: #ef4444;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-delete:hover {
+  background-color: #b91c1c;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.3);
+}
+
+.your-account {
+  color: #1d3557;
+  font-weight: bold;
+  padding: 5px 10px;
+  background-color: #a8dadc;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  .admin-management-container table, 
+  .admin-management-container thead, 
+  .admin-management-container tbody, 
+  .admin-management-container th, 
+  .admin-management-container td, 
+  .admin-management-container tr {
+    display: block;
+  }
+
+  .admin-management-container thead tr {
+    display: none;
+  }
+
+  .admin-management-container td {
+    padding: 12px 15px;
+    position: relative;
+    text-align: right;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .admin-management-container td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    width: 50%;
+    font-weight: 600;
+    text-align: left;
+    color: #3b82f6;
+  }
+}
+
